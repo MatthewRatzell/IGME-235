@@ -1,0 +1,29 @@
+
+p,ul,a{
+    font-family: 'Noto Sans', sans-serif;
+    text-align:left;
+}
+h1,footer
+{
+    border-bottom: 1px solid orange;
+}
+h1,h2,h3,h4
+{
+    font-family: 'Potta One', cursive;
+    color:green;
+}
+blockquote 
+{ 
+    background-color: lightgray;
+    padding: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+}
+body
+{
+    background: linear-gradient(#568a3fb0, #e65502);
+}
+.cover{
+    float:right;
+}
+
+  
