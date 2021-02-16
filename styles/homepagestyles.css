@@ -1,0 +1,87 @@
+main
+{
+  border: 3px solid black;
+  margin: 0 auto;
+  width: 60vw;
+  background: linear-gradient(#db521cb0, #8abb05);
+}
+body
+{
+background-color: rgba(0, 0, 0, 0.808);
+}
+#me
+{
+    border-bottom: 1px solid black;
+}
+#me img
+{
+    display:block;
+    max-width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Projects
+{
+    display:flex;  
+}
+.WebProjects
+{
+    max-width: fit-content;
+    margin-right: auto;
+    display:block;
+    border-bottom: 1px solid black;
+}
+.Repo
+{
+    max-width: fit-content;
+    margin-left: auto;
+    display:block;
+    border-bottom: 1px solid black;
+}
+p
+{
+font-family: 'Inconsolata', monospace;
+text-align: center;
+}
+li,a
+{
+    font-family: 'Inconsolata', monospace;
+}
+h1
+{
+    text-align: center;
+}
+h1,h2,h3
+{
+    font-family: 'Roboto', sans-serif;
+}
+.Repo a
+{
+    display:block;
+    text-align: center;
+}
+footer
+{
+    text-align:center;
+}
+
+a:link
+{
+
+    color: rgb(4, 230, 192);
+}
+  
+a:visited 
+{
+    color: rgb(30, 6, 250);
+}
+  
+a:hover 
+{
+    color: red;
+}
+  
+a:active 
+{
+    color: rgb(137, 3, 199);
+}
