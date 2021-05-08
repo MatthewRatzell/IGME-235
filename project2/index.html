@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href="styles/style.css">
+    <title>GIF Finder</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+    </style>
+</head>
+<body>
+    <main>
+    <header>
+        <button id="loadFavorites">Favorites</button>
+        <h1>GIF Finder</h1>
+    </header>
+    <form>
+        
+        <label for="search">Search</label>
+        <input id="search" type="search"/>
+        <button id="btnSearch">Go</button>      
+        <div class="dropdown">
+            <button class="dropbtn">Max Rating:All</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="loadG()">G</a>
+                <a href="#" onclick="loadPG()">PG</a>
+                <a href="#" onclick="loadPG13()">PG-13</a>
+                <a href="#" onclick="loadR()">R</a>
+                <a href='#' onclick="loadALL()">Show All</a>
+            </div>
+          </div>
+          <br>
+          <br>
+
+    </form>
+    <h1 id = "dynamicID"></h1>
+
+    <div class="out"></div>
+    <form>
+    <button id="Previous" onclick = "loadPrevious()">Previous</button>
+    <button id="Next" onclick = "loadNext()">Next</button>
+    </form>
+
+    <br>
+    <br>
+    
+    <footer>
+        <p><a href="sources/documentation.html">Documentation</a></p>
+    </footer>
+</main>
+ <script src="scripts/script.js" type="text/javascript"></script>
+</body>
+</html>
+

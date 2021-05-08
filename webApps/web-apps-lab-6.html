@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-6-HW</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+<h2>My Favorite Colors</h2>
+
+<ol id="colorsList">
+	
+</ol>
+
+<h2>My Favorite Foods</h2>
+
+<ol id="foodsList">
+	
+</ol>
+
+<h2>My Favorite Links</h2>
+
+<ol id="linksList">
+	
+</ol>
+
+<script>
+"use strict";
+let colors = ["red","green","blue","purple","pink"];
+let foods = ["eggs","steak","spaghetti"];
+
+//classic for loop
+for (var i = 0; i < colors.length; i++) 
+{
+  //creating the list element
+  var li = document.createElement('li');
+  li.innerHTML = colors[i];
+  document.getElementById("colorsList").appendChild(li);
+}
+
+//for of loop
+for (const value of foods) 
+{
+  //creating the list element
+  var li = document.createElement('li');
+  li.innerHTML = value.toString();
+  document.getElementById("foodsList").appendChild(li);
+}
+// Optional - can you figure out how to pull both the key AND the value
+// from the `links` object literal?
+let links = {
+		"RIT": "http://www.rit.edu",
+		"RWAG" : "https://www.facebook.com/RWAGclub",
+		"New Media Club" : "http://newmediaclub.cias.rit.edu"
+	}
+
+///i tried to figure this out but couldnt for the life of me
+//for in loop
+for (const property in links) 
+{
+  //creating the list element
+  var li = document.createElement('li');
+  //creating the link
+  var link = document.createElement('a');
+  link.textContent = property;
+  link.href = links[property];
+  //appending the link to the li object
+  li.appendChild(link);
+  //now we append the li object to the linksList
+  document.getElementById("linksList").appendChild(li);
+}
+
+
+
+</script>
+</body>
+</html>

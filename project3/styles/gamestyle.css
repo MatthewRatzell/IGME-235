@@ -1,0 +1,30 @@
+body{
+    background-color: bisque;
+    cursor: url(../media/gameSprites/crosshair.png),crosshair;
+    text-align: center;
+    
+}
+h1{
+    display:inline;
+    position: relative; 
+    color:black;
+ }
+ .playerStats{
+     align-content: center;
+     text-align: center;
+     background-color: chocolate;
+     width: 55%;
+     margin-left: 22%;
+ }
+ .controls{
+    align-content: center;
+    text-align: center;
+    background-color: chocolate;
+    width: 42%;
+    margin-left: 29%;
+}
+ footer{
+
+     text-align: center;
+     background-color: cyan;
+ }

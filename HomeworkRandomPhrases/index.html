@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Phrases</title>
+
+    
+</head>
+<body>
+    <div id = content>
+    <h1 id = "title">What is Rickey Thinking About?</h1>
+    <img src="media/rick.jpg" alt="rick">
+    <h2 id = "dynamicText">This is dynamic text atm, that may not be yet apprectiated but that is becasue we have to figure our css out still</h2>
+</div>
+<footer>
+    <p>Matthew Ratzell IGME-235<p>
+</footer>
+<button id ="button">Change Quote</button>
+<script>
+    //making sure we call our function when the page first laods
+    window.onload = function () 
+    {
+     displayQuote();                  
+    }
+    //making our array of phrases
+    let phrases = ["A link is only as long as your longest strong chain", "Every kid goes through phrases","I dont have enough people words to make it understand you the way it understands me","It's clear to see who makes the pants here","One man's garbage is another man person's good ungarbage","What Julian doesn't grow won't burn him","Woke up on the left side of the bed","I'm Not A Pessimist, I'm An Optometrist."]
+    //storing our button
+    let clickableButton = document.getElementById("button");
+    //adding the event listener to our button
+    if(clickableButton != null)
+    {
+        clickableButton.addEventListener('click',displayQuote);
+    }
+
+    //function that changes our dynamic element to a random quote 
+    function displayQuote(e) 
+    {
+        //storing our random phrase
+        let item = phrases[Math.floor(Math.random() * phrases.length)];    
+        let dynamicText = document.getElementById("dynamicText");
+        dynamicText.innerHTML = item;
+    }
+</script>
+</body>
+</html>

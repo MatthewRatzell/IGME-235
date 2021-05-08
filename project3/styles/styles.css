@@ -1,0 +1,14 @@
+body{
+    background-color: blueviolet;
+}
+#body2{
+    background-color: burlywood;
+    padding: 15px;
+    margin:50px;
+}
+h1,h2{
+    font-family: 'Orelega One', cursive
+}
+p{
+    font-family: 'Roboto Condensed', sans-serif;
+}

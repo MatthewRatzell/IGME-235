@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-6</title>
+	<style>
+		body{
+			font-family:sans-serif;
+		}
+		#colorform{
+			background-color:#dfecdf;
+			color: #111;
+			padding:1em;width:400px;
+		}
+		#colorform p#info{
+			background-color:white;
+			color: black;
+			width:300px;
+			height:100px;
+			padding:.5em;
+		}
+		
+		#colorform legend{ 
+			font-weight:bold;
+			font-size:1.2em;
+		}
+	</style>
+</head>
+<body>
+
+<div id="colorform">
+	<legend>Choose your favorite color!</legend>
+	<p><input type="radio" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
+	<p><input type="radio" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
+	<p><input type="radio" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+	<p><button id="colorButton" type="button">Submit</button></p>
+	<p id="info"></p>
+</div>
+
+<script>
+    //grabing the 3 different buttons individually because i couldnt figure out the for selection
+let red = document.getElementById("colorGroupRed");
+let green = document.getElementById("colorGroupGreen");
+let blue = document.getElementById("colorGroupBlue");
+//grabbing our text box so we can change our textbox text
+let textBox = document.getElementById("info");
+//also grabing our submit button
+let submitButton = document.getElementById("colorButton");
+let coloredText = document.querySelector("legend");
+
+
+
+
+//making sure each radio button has an event listener
+red.addEventListener('change',updateValue);
+green.addEventListener('change',updateValue);
+blue.addEventListener('change',updateValue );
+//now adding the onclick event listened to our submit button
+submitButton.addEventListener('click', submitUpdate);
+//variable to hold our current color
+let currentColor;
+
+//our functions
+function updateValue(e)
+{
+    textBox.innerHTML = "You have selected " + e.target.value;
+    currentColor = e.target.value;
+}
+
+function submitUpdate(e)
+{
+    textBox.innerHTML = "Your FINAL CHOICE is " + currentColor;
+
+    if(currentColor == "red")
+    {
+        coloredText.style.color = "red";
+    }
+    else if (currentColor == "green")
+    {
+        coloredText.style.color = "green";
+    }
+    else if (currentColor == "blue")
+    {
+        coloredText.style.color = "blue";
+    }
+
+}
+
+/* Write your code here! */
+</script>
+</body>
+</html>

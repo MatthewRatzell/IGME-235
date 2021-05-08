@@ -1,0 +1,207 @@
+
+
+
+#wrapper
+{
+    display:grid;
+    grid-template-areas:
+    "header" 
+    "oaktree" 
+    "bigImage" 
+    "crafting" 
+    "footer";
+}
+
+
+@media screen and (min-width: 760px){
+    #wrapper
+    {
+     display:grid;
+     grid-template-rows:1fr auto 10fr 10fr 200px;
+     grid-template-areas:"header" "oaktree" "bigImage" "crafting" "footer";
+    }
+}
+#Header
+{
+padding-left: 10%;
+padding-right: 10%;
+display:flex;
+color:white;
+flex-wrap:nowrap;
+grid-area: header;
+background-color: #686868;
+font-family: retro;
+align-items: center;
+text-align:end;
+}
+#Header>h1
+{
+    margin-right: auto;
+}
+#Header > img
+{
+    float:right;
+}
+#Header>h3
+{
+    margin-left: auto;
+}
+
+
+#OakTree
+{
+    width:100%;
+    height:auto;
+    display:flex;
+    grid-area: oaktree;
+    background-color: #35363d;
+}
+
+#OakTree>#OakTreeText
+{
+
+    height:100%;
+    padding-top: 2.1%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width:31vw;
+}
+#OakTreeText>article
+{
+    padding:13%;
+    font-family: dogica;
+    color: white;
+    width: 101%;
+    height: auto;
+    background-color: #686868;
+    flex: 1 0 35%;
+}
+#OakTree>img
+{
+    width:0%;
+    height:0%;
+}
+
+@media screen and (min-width: 760px)
+{
+#OakTree>img
+{
+    width:35%;
+    height:74.8%;
+    margin: 40px;
+    padding: 35px;
+    margin-right: 2vw;
+    margin-left: -.5vw;
+    background-color: #324e44;
+    border: solid white 4px;
+}
+}
+#MinecraftImage
+{
+grid-area: bigImage;
+background-image: url('../images/valley.jpg');
+
+}
+
+#Crafting
+{
+grid-area: crafting;
+background-color: #35363d;
+display: flex;
+flex-wrap: wrap;
+color:white;
+}
+.Planks,.Sticks,.Chests,.Stairs
+{
+    box-sizing: border-box;
+    margin-bottom:3%;
+    font-family: retro;
+    text-align:center;
+    background-color: #324e44;
+    border: solid white 4px;
+}
+.PlanksText,.SticksText,.ChestsText,.StairsText
+{
+    font-family: dogica;
+    background-color: #686868;
+    margin-bottom:3%;
+}
+.Planks
+{   
+    padding:1%;
+    margin-top: 3%;
+    margin-left:10%;
+    margin-right:3%;
+    flex: 1 0 15%;
+}
+.PlanksText
+{
+    padding:2%;
+    margin-top: 3%;
+    margin-right:3%;
+    flex: 1 0 11%;
+}
+.Sticks
+{  
+    padding:2%;
+    margin-top: 3%;
+    margin-right:3%;
+    flex: 1 0 15%;
+}
+.SticksText
+{
+    padding:2%;
+    margin-top: 3%;
+    margin-right:10%;
+    flex: 1 0 11%;
+}
+.Chests
+{  
+    padding:1%;
+    margin-left:10%;
+    margin-right:3%;
+    flex: 1 0 15%;
+}
+.ChestsText
+{
+    padding:2%;
+    margin-right:3%;
+    flex: 1 0 11%;
+}
+.Stairs
+{  
+    padding:2%;  
+    margin-right:3%;
+    flex: 1 0 15%;
+}
+.StairsText
+{
+    padding:2%;
+    margin-right:10%;
+    flex: 1 0 11%;
+}
+footer
+{
+grid-area: footer;
+background-image: url('../images/trees.jpg');
+background-size:cover;
+
+font-family: retro;
+padding-left: 10%;
+padding-right: 10%;
+display:flex;
+color:white;
+flex-wrap:nowrap;
+}
+footer>h2
+{
+    align-items: center;
+    margin-right: auto;
+    text-align:end;
+    
+}
+footer>h3
+{
+    align-items: right;
+    text-align:right;
+}
